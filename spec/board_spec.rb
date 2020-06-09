@@ -37,4 +37,8 @@ describe 'A Tic Tac Toe board' do
     expect(board.token_at :top, :left).to eq(nil)
   end
 
+  it 'can test if board is empty' do
+    expect(board.empty?).to be_truthy
+  end
+
 end
