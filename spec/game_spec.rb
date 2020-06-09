@@ -58,32 +58,32 @@ describe 'A game of tic tac toe' do
     expect(game).to_not be_over
   end
 
-  # it 'is over when the board is full' do
-  #   expect(Game.new(full_board)).to be_over
-  # end
+  it 'is over when the board is full' do
+    expect(Game.new(full_board)).to be_over
+  end
 
-  # it 'is a tie if there is no winner and the board is full' do
-  #   game = Game.new(full_board)
-  #   expect(game).to be_tie
-  # end
+  it 'is a tie if there is no winner and the board is full' do
+    game = Game.new(full_board)
+    expect(game).to be_tie
+  end
 
-  # describe 'winning' do
+  describe 'winning' do
 
-  #   it 'reports :x is the winner when a row is full of :x' do
-  #     game = Game.new(x_wins_board)
-  #     expect(game.winner).to eq(:x)
-  #   end
+    it 'reports :x is the winner when a row is full of :x' do
+      game = Game.new(x_wins_board)
+      expect(game.winner).to eq(:x)
+    end
 
-  #   it 'reports :o is the winner when a row is full of :o' do
-  #     game = Game.new(o_wins_board)
-  #     expect(game.winner).to eq(:o)
-  #   end
+    it 'reports :o is the winner when a row is full of :o' do
+      game = Game.new(o_wins_board)
+      expect(game.winner).to eq(:o)
+    end
 
-  #   it 'reports nil if there is no winner' do
-  #     game = Game.new
-  #     expect(game.winner).to be_nil
-  #   end
+    it 'reports nil if there is no winner' do
+      game = Game.new
+      expect(game.winner).to be_nil
+    end
 
-  # end
+  end
 
 end
