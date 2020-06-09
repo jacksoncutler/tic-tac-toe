@@ -37,9 +37,6 @@ class Game
         bottom: {left: :x, middle: nil, right: nil}
         }
       :o
-    else
-      nil
-    end
   end
 
 end
