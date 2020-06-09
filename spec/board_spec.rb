@@ -39,6 +39,12 @@ describe 'A Tic Tac Toe board' do
 
   it 'can test if board is empty' do
     expect(board.empty?).to be_truthy
+    board.place(:fake,:top,:left)
+    expect(board.empty?).to be_falsy
+  end
+
+  it 'can test if board is full' do
+
   end
 
 end
