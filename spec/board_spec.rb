@@ -28,4 +28,9 @@ describe 'A Tic Tac Toe board' do
     expect(board.locations).to eq(empty_board)
   end
 
+  it 'can place a token' do
+    board.place(:fake,:top,:left)
+    expect(board.locations).not_to eq(empty_board)
+  end
+
 end
