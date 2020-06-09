@@ -33,4 +33,8 @@ describe 'A Tic Tac Toe board' do
     expect(board.locations).not_to eq(empty_board)
   end
 
+  it 'can return placement of token' do
+    expect(board.token_at :top, :left).to eq(nil)
+  end
+
 end
