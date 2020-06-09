@@ -45,6 +45,12 @@ describe 'A Tic Tac Toe board' do
     expect(board.token_at :top, :left).to eq(nil)
   end
 
+  it 'can reset board' do
+    board.place(:fake,:top,:left)
+    board.reset
+    expect(board.locations).to eq(empty_board)
+  end
+
   it 'can test if board is empty' do
     expect(board.empty?).to be_truthy
     board.place(:fake,:top,:left)
