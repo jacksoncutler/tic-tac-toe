@@ -12,6 +12,14 @@ describe 'A Tic Tac Toe board' do
     }
   }
 
+  let(:full_board) {
+    {
+      top: {left: :fake, middle: :fake, right: :fake},
+      middle: {left: :fake, middle: :fake, right: :fake},
+      bottom: {left: :fake, middle: :fake, right: :fake}
+    }
+  }
+
   it 'exists' do
     Board.new
   end
@@ -44,7 +52,8 @@ describe 'A Tic Tac Toe board' do
   end
 
   it 'can test if board is full' do
-
+    expect(board.full?).to be_falsy
+    expect(Board.new(full_board).full?).to be_truthy
   end
 
 end
